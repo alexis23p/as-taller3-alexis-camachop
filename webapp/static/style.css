@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; margin: 1rem; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.card { border: 1px solid #ddd; padding: 1rem; border-radius: 6px; }
+button { background: #007bff; color: white; border: none; padding: 0.5rem 0.8rem; border-radius: 4px; }

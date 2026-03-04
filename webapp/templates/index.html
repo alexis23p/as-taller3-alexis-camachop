@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AS Taller3 - Tienda (scaffold)</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Tienda (scaffold)</h1>
+    </header>
+    <main>
+      <section class="products">
+        {% if products %}
+          {% for p in products %}
+            <div class="card">
+              <h3>{{ p.name }}</h3>
+              <p>{{ p.description }}</p>
+              <p>Precio: {{ p.price }}</p>
+              <form method="post" action="/add-to-cart">
+                <input type="hidden" name="product_id" value="{{ p.id }}">
+                <input type="number" name="quantity" value="1" min="1">
+                <button type="submit">Agregar</button>
+              </form>
+            </div>
+          {% endfor %}
+        {% else %}
+          <p>No hay productos disponibles.</p>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>

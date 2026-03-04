@@ -1,0 +1,2 @@
+-- Inicialización mínima de la base de datos
+-- Si usas SQLite esto no se aplicará, pero es útil para Postgres/MySQL
